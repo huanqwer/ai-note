@@ -2,6 +2,8 @@
 
 本项目是一个专注于人工智能全链路技术的开源学习资料工程，旨在为 AI 学习者和开发者提供系统化的学习资源与实践案例。
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## 项目简介
 
 本开源项目是全AI链路的学习资料工程，涵盖了从基础理论到实际应用的完整学习路径。项目整合了 AI 领域的核心知识点，包括机器学习、深度学习、自然语言处理、计算机视觉等多个方向，为不同层次的学习者提供循序渐进的学习体验。
@@ -23,6 +25,18 @@
 ## 开始使用
 
 欢迎探索本项目，开启您的 AI 学习之旅！
+
+## 开源协议
+
+本项目采用 MIT 开源协议。详见 [LICENSE](LICENSE) 文件。
+
+## 贡献
+
+欢迎贡献代码、报告问题或提出建议。请查看 [CONTRIBUTING.md](CONTRIBUTING.md) 了解详情。
+
+## 变更日志
+
+查看 [CHANGELOG.md](CHANGELOG.md) 了解项目的变更历史。
 
 ---
 
@@ -51,3 +65,15 @@ This open-source project is a full AI chain learning resource engineering, cover
 ## Getting Started
 
 Welcome to explore this project and start your AI learning journey!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please check [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the project's change history.
