@@ -20,10 +20,27 @@ globs:
 
 ## 工程名获取规则
 
-Agent 应从当前工作区路径中提取工程名作为 user_id：
-- 从工作区路径的最后一个目录名提取
+Agent 应通过以下优先级顺序获取项目标识符作为 user_id：
+
+### 优先级 1：从项目配置文件提取
+- 检查项目根目录是否存在配置文件（如 package.json, pyproject.toml, Cargo.toml, go.mod 等）
+- 从配置文件中提取项目名称字段（如 name, package, project 等）
+- 如果找到，使用该名称作为 user_id
+
+### 优先级 2：从 Git 远程仓库提取
+- 如果项目是 Git 仓库，检查 git remote 配置
+- 从 remote URL 中提取项目名（如 github.com/user/project-name 中的 project-name）
+- 如果找到，使用该名称作为 user_id
+
+### 优先级 3：从工作区路径提取
+- 如果上述方法均未找到，从工作区路径的最后一个目录名提取
 - 例如：工作区路径为 `/Users/ling/projects/ai-note`，则 user_id 为 `ai-note`
+- 确保提取的是项目根目录名，而非嵌套子目录
+
+### 一致性保证
 - 工程名应保持一致性，同一项目始终使用相同的 user_id
+- 建议在项目首次初始化时确定 user_id 并记录
+- 后续对话中优先使用已记录的 user_id
 
 ## 强制中止条件
 
